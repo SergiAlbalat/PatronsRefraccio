@@ -8,8 +8,9 @@ namespace PatronsRefraccio
         {
             const string Msg1 = "Introdueix l'amplada del rectangle:";
             const string Msg2 = "Introdueix l'altura del rectangle:";
+            const string Msg3 = "L'àrea del rectangle és: {0}";
             const string Error = "El format del numero es incorrecte";
-            double width, height;
+            double width, height, area;
 
             // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
             Console.WriteLine(Msg1);
@@ -26,8 +27,8 @@ namespace PatronsRefraccio
                 } while (!MyMethods.IsNatural(height));
 
                 // Calcula l'àrea
-                double area = width * height;
-                Console.WriteLine("L'àrea del rectangle és: " + area);
+                area = MyMethods.CalculateRectangle(width, height);
+                Console.WriteLine(Msg3, area);
 
                 // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
                 Console.WriteLine("Introdueix el radi del cercle:");
