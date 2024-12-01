@@ -43,18 +43,7 @@ namespace PatronsRefraccio
                 Console.WriteLine(Msg5, circumference);
 
                 // Imprimeix un missatge basat en el valor de l'àrea
-                if (area > 50)
-                {
-                    Console.WriteLine("L'àrea és més gran de 50");
-                }
-                else if (area > 20)
-                {
-                    Console.WriteLine("L'àrea és entre 20 i 50");
-                }
-                else
-                {
-                    Console.WriteLine("L'àrea és menor o igual a 20");
-                }
+                MyMethods.WriteArea(area);
             }
             catch (FormatException)
             {
